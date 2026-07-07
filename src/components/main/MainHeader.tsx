@@ -90,13 +90,13 @@ export default function MainHeader() {
                       <p>Full CRM sync & AI NLP routing.</p>
                     </div>
                   </div>
-                  <div className="mega-item">
+                  <Link href="/twin" className="mega-item" style={{ textDecoration: 'none' }}>
                     <div className="mega-icon"><Sparkles size={20} color="#5773FF" /></div>
                     <div>
-                      <h4>AI Workflows</h4>
-                      <p>Replace manual data entry with agents.</p>
+                      <h4>Digital Twin Studio</h4>
+                      <p>Train an AI agent on your business data.</p>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               </div>
             )}
