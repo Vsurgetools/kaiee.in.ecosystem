@@ -22,8 +22,8 @@ export default async function middleware(req: NextRequest) {
     .get("host")!
     .replace(".localhost:3000", `.${process.env.NEXT_PUBLIC_ROOT_DOMAIN || 'kaiee.in'}`);
 
-  // Special case for localhost testing
-  if (hostname === 'localhost:3000') {
+  // Special case for localhost testing and Cloudflare Pages default domains
+  if (hostname === 'localhost:3000' || hostname.endsWith('.pages.dev')) {
     hostname = 'kaiee.in';
   } else if (hostname.includes('localhost')) {
     // If someone uses community.localhost:3000 it becomes community.kaiee.in
